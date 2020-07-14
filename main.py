@@ -10,6 +10,10 @@ def plotit(l,xmax = 20):
     #plt.plot(x,y)
     plt.plot(x,yp)
 
+def getzeros(l,nz,eps = 1e-16):
+    xguess = xguess_n(l,nz)
+    return xgood(l,xguess,eps)
+
 def fp(x,l):
     if l==0:
         return -sp.spherical_jn(1,x,derivative=True)
